@@ -1,0 +1,263 @@
+2025-07-07 21:35:18.868  INFO [userservice,,] [userservice,,] 1696 --- [main] o.m.userservice.UserserviceApplication  : Starting UserserviceApplication using Java 23.0.2 with PID 1696 (D:\AWBD Microservices\userservice\target\classes started by ioana in D:\AWBD Microservices\userservice)
+-2025-07-07 21:35:18.870  INFO [userservice,,] [userservice,,] 1696 --- [main] o.m.userservice.UserserviceApplication  : The following 1 profile is active: "h2"
+-2025-07-07 21:35:18.919  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Fetching config from server at : http://localhost:8070/
+-2025-07-07 21:35:18.920  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Located environment: name=userservice, profiles=[default], label=null, version=aa90dac17c9e7963da7e41114ac512ae2b62b3ae, state=
+-2025-07-07 21:35:18.920  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Fetching config from server at : http://localhost:8070/
+-2025-07-07 21:35:18.920  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Located environment: name=userservice, profiles=[h2], label=null, version=aa90dac17c9e7963da7e41114ac512ae2b62b3ae, state=
+-2025-07-07 21:35:19.996  INFO [userservice,,] [userservice,,] 1696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-2025-07-07 21:35:20.160  INFO [userservice,,] [userservice,,] 1696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 154 ms. Found 2 JPA repository interfaces.
+-2025-07-07 21:35:20.414  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.cloud.context.scope.GenericScope    : BeanFactory id=6f3042e5-0cb6-3ab3-a356-076b02cf68a8
+-2025-07-07 21:35:20.808  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat initialized with port 8085 (http)
+-2025-07-07 21:35:20.820  INFO [userservice,,] [userservice,,] 1696 --- [main] o.apache.catalina.core.StandardService  : Starting service [Tomcat]
+-2025-07-07 21:35:20.820  INFO [userservice,,] [userservice,,] 1696 --- [main] o.apache.catalina.core.StandardEngine   : Starting Servlet engine: [Apache Tomcat/10.1.42]
+-2025-07-07 21:35:20.872  INFO [userservice,,] [userservice,,] 1696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]      : Initializing Spring embedded WebApplicationContext
+-2025-07-07 21:35:20.872  INFO [userservice,,] [userservice,,] 1696 --- [main] w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1950 ms
+-2025-07-07 21:35:21.233  INFO [userservice,,] [userservice,,] 1696 --- [main] o.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+-2025-07-07 21:35:21.294  INFO [userservice,,] [userservice,,] 1696 --- [main] org.hibernate.Version                   : HHH000412: Hibernate ORM core version 6.6.18.Final
+-2025-07-07 21:35:21.326  INFO [userservice,,] [userservice,,] 1696 --- [main] o.h.c.internal.RegionFactoryInitiator   : HHH000026: Second-level cache disabled
+-2025-07-07 21:35:21.575  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo     : No LoadTimeWeaver setup: ignoring JPA class transformer
+-2025-07-07 21:35:21.600  INFO [userservice,,] [userservice,,] 1696 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Starting...
+-2025-07-07 21:35:21.763  INFO [userservice,,] [userservice,,] 1696 --- [main] com.zaxxer.hikari.pool.HikariPool       : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bingeBuddiesDB user=SA
+-2025-07-07 21:35:21.765  INFO [userservice,,] [userservice,,] 1696 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Start completed.
+-2025-07-07 21:35:21.786  WARN [userservice,,] [userservice,,] 1696 --- [main] org.hibernate.orm.deprecation           : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+-2025-07-07 21:35:21.805  INFO [userservice,,] [userservice,,] 1696 --- [main] org.hibernate.orm.connections.pooling   : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+-2025-07-07 21:35:22.619  INFO [userservice,,] [userservice,,] 1696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator      : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+-2025-07-07 21:35:22.668  INFO [userservice,,] [userservice,,] 1696 --- [main] j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+-2025-07-07 21:35:22.972  INFO [userservice,,] [userservice,,] 1696 --- [main] o.m.u.service.impl.UserServiceImpl      : UserServiceImpl initialized with UserRepository and AuthorityService.
+-2025-07-07 21:35:23.058  WARN [userservice,,] [userservice,,] 1696 --- [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-2025-07-07 21:35:23.549  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.b.a.e.web.EndpointLinksResolver     : Exposing 18 endpoints beneath base path '/actuator'
+-2025-07-07 21:35:24.253  INFO [userservice,,] [userservice,,] 1696 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration   : H2 console available at '/h2-console '. Database available at 'jdbc:h2:mem:bingeBuddiesDB'
+-2025-07-07 21:35:24.309  INFO [userservice,,] [userservice,,] 1696 --- [main] DiscoveryClientOptionalArgsConfiguration: Eureka HTTP Client uses RestTemplate.
+-2025-07-07 21:35:24.352  WARN [userservice,,] [userservice,,] 1696 --- [main] ConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@65bf5c38 description = 'Spring Cloud Sleuth is not compatible with this Spring Cloud release train', action = 'Migrate from Spring Cloud Sleuth to Micrometer Tracing .
+You can check the Sleuth 3.1 Migration Guide over here [https://github.com/micrometer-metrics/tracing/wiki/Spring-Cloud-Sleuth-3.1-Migration-Guide]. 
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+-2025-07-07 21:35:24.360  INFO [userservice,,] [userservice,,] 1696 --- [main] j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+-2025-07-07 21:35:24.368  INFO [userservice,,] [userservice,,] 1696 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated...
+-2025-07-07 21:35:24.370  INFO [userservice,,] [userservice,,] 1696 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed.
+-2025-07-07 21:35:24.373  INFO [userservice,,] [userservice,,] 1696 --- [main] o.apache.catalina.core.StandardService  : Stopping service [Tomcat]
+-2025-07-07 21:35:24.390  INFO [userservice,,] [userservice,,] 1696 --- [main] .s.b.a.l.ConditionEvaluationReportLogger: 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-07-07 21:35:24.406 ERROR [userservice,,] [userservice,,] 1696 --- [main] o.s.b.d.LoggingFailureAnalysisReporter  : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Cloud Sleuth is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Migrate from Spring Cloud Sleuth to Micrometer Tracing .
+You can check the Sleuth 3.1 Migration Guide over here [https://github.com/micrometer-metrics/tracing/wiki/Spring-Cloud-Sleuth-3.1-Migration-Guide]. 
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+-2025-07-07 21:38:56.337 - INFO [userservice,,] 24452 --- [main] o.m.userservice.UserserviceApplication  : Starting UserserviceApplication using Java 23.0.2 with PID 24452 (D:\AWBD Microservices\userservice\target\classes started by ioana in D:\AWBD Microservices\userservice)
+-2025-07-07 21:38:56.339 - INFO [userservice,,] 24452 --- [main] o.m.userservice.UserserviceApplication  : The following 1 profile is active: "h2"
+-2025-07-07 21:38:56.386 - INFO [userservice,,] 24452 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Fetching config from server at : http://localhost:8070/
+-2025-07-07 21:38:56.387 - INFO [userservice,,] 24452 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Located environment: name=userservice, profiles=[default], label=null, version=aa90dac17c9e7963da7e41114ac512ae2b62b3ae, state=
+-2025-07-07 21:38:56.387 - INFO [userservice,,] 24452 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Fetching config from server at : http://localhost:8070/
+-2025-07-07 21:38:56.387 - INFO [userservice,,] 24452 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Located environment: name=userservice, profiles=[h2], label=null, version=aa90dac17c9e7963da7e41114ac512ae2b62b3ae, state=
+-2025-07-07 21:38:57.430 - INFO [userservice,,] 24452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-2025-07-07 21:38:57.552 - INFO [userservice,,] 24452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+-2025-07-07 21:38:57.818 - INFO [userservice,,] 24452 --- [main] o.s.cloud.context.scope.GenericScope    : BeanFactory id=fbd7a3cf-a913-33ba-8f9c-1de994bdae98
+-2025-07-07 21:38:58.210 - INFO [userservice,,] 24452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat initialized with port 8085 (http)
+-2025-07-07 21:38:58.224 - INFO [userservice,,] 24452 --- [main] o.apache.catalina.core.StandardService  : Starting service [Tomcat]
+-2025-07-07 21:38:58.224 - INFO [userservice,,] 24452 --- [main] o.apache.catalina.core.StandardEngine   : Starting Servlet engine: [Apache Tomcat/10.1.42]
+-2025-07-07 21:38:58.286 - INFO [userservice,,] 24452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]      : Initializing Spring embedded WebApplicationContext
+-2025-07-07 21:38:58.286 - INFO [userservice,,] 24452 --- [main] w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1898 ms
+-2025-07-07 21:38:58.688 - INFO [userservice,,] 24452 --- [main] o.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+-2025-07-07 21:38:58.727 - INFO [userservice,,] 24452 --- [main] org.hibernate.Version                   : HHH000412: Hibernate ORM core version 6.6.18.Final
+-2025-07-07 21:38:58.755 - INFO [userservice,,] 24452 --- [main] o.h.c.internal.RegionFactoryInitiator   : HHH000026: Second-level cache disabled
+-2025-07-07 21:38:58.972 - INFO [userservice,,] 24452 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo     : No LoadTimeWeaver setup: ignoring JPA class transformer
+-2025-07-07 21:38:58.996 - INFO [userservice,,] 24452 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Starting...
+-2025-07-07 21:38:59.147 - INFO [userservice,,] 24452 --- [main] com.zaxxer.hikari.pool.HikariPool       : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bingeBuddiesDB user=SA
+-2025-07-07 21:38:59.149 - INFO [userservice,,] 24452 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Start completed.
+-2025-07-07 21:38:59.168 - WARN [userservice,,] 24452 --- [main] org.hibernate.orm.deprecation           : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+-2025-07-07 21:38:59.187 - INFO [userservice,,] 24452 --- [main] org.hibernate.orm.connections.pooling   : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+-2025-07-07 21:38:59.976 - INFO [userservice,,] 24452 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator      : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+-2025-07-07 21:39:00.031 - INFO [userservice,,] 24452 --- [main] j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+-2025-07-07 21:39:00.335 - INFO [userservice,,] 24452 --- [main] o.m.u.service.impl.UserServiceImpl      : UserServiceImpl initialized with UserRepository and AuthorityService.
+-2025-07-07 21:39:00.424 - WARN [userservice,,] 24452 --- [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-2025-07-07 21:39:00.898 - INFO [userservice,,] 24452 --- [main] o.s.b.a.e.web.EndpointLinksResolver     : Exposing 18 endpoints beneath base path '/actuator'
+-2025-07-07 21:39:01.654 - INFO [userservice,,] 24452 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration   : H2 console available at '/h2-console '. Database available at 'jdbc:h2:mem:bingeBuddiesDB'
+-2025-07-07 21:39:01.710 - INFO [userservice,,] 24452 --- [main] DiscoveryClientOptionalArgsConfiguration: Eureka HTTP Client uses RestTemplate.
+-2025-07-07 21:39:01.756 - WARN [userservice,,] 24452 --- [main] iguration$LoadBalancerCaffeineWarnLogger: Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+-2025-07-07 21:39:01.864 - INFO [userservice,,] 24452 --- [main] o.s.c.n.eureka.InstanceInfoFactory      : Setting initial instance status as: STARTING
+-2025-07-07 21:39:01.889 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Initializing Eureka in region us-east-1
+-2025-07-07 21:39:01.893 - INFO [userservice,,] 24452 --- [main] c.n.d.s.r.aws.ConfigClusterResolver     : Resolving eureka endpoints via configuration
+-2025-07-07 21:39:01.902 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Disable delta property : false
+-2025-07-07 21:39:01.902 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Single vip registry refresh property : null
+-2025-07-07 21:39:01.902 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Force full registry fetch : false
+-2025-07-07 21:39:01.902 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Application is null : false
+-2025-07-07 21:39:01.902 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Registered Applications size is zero : true
+-2025-07-07 21:39:01.902 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Application version is -1: true
+-2025-07-07 21:39:01.902 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Getting all instance registry info from the eureka server
+-2025-07-07 21:39:02.129 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : The response status is 200
+-2025-07-07 21:39:02.131 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Starting heartbeat executor: renew interval is: 30
+-2025-07-07 21:39:02.134 - INFO [userservice,,] 24452 --- [main] c.n.discovery.InstanceInfoReplicator    : InstanceInfoReplicator onDemand update allowed rate per min is 4
+-2025-07-07 21:39:02.135 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Discovery Client initialized at timestamp 1751913542135 with initial instances count: 3
+-2025-07-07 21:39:02.141 - INFO [userservice,,] 24452 --- [main] o.s.c.n.e.s.EurekaServiceRegistry       : Registering application USERSERVICE with eureka with status UP
+-2025-07-07 21:39:02.142 - INFO [userservice,,] 24452 --- [main] com.netflix.discovery.DiscoveryClient   : Saw local status change event StatusChangeEvent [timestamp=1751913542142, current=UP, previous=STARTING]
+-2025-07-07 21:39:02.144 - INFO [userservice,,] 24452 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:c1f9817f225e0518a12207b7d39d37e5: registering service...
+-2025-07-07 21:39:02.157 - INFO [userservice,,] 24452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat started on port 8085 (http) with context path '/'
+-2025-07-07 21:39:02.158 - INFO [userservice,,] 24452 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration: Updating port to 8085
+-2025-07-07 21:39:02.175 - INFO [userservice,,] 24452 --- [main] o.m.userservice.UserserviceApplication  : Started UserserviceApplication in 7.734 seconds (process running for 8.566)
+-2025-07-07 21:39:02.192 - INFO [userservice,,] 24452 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:c1f9817f225e0518a12207b7d39d37e5 - registration status: 204
+-2025-07-07 21:39:03.127 - INFO [userservice,,] 24452 --- [RMI TCP Connection(1)-192.168.100.18] o.a.c.c.C.[Tomcat].[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+-2025-07-07 21:39:03.127 - INFO [userservice,,] 24452 --- [RMI TCP Connection(1)-192.168.100.18] o.s.web.servlet.DispatcherServlet       : Initializing Servlet 'dispatcherServlet'
+-2025-07-07 21:39:03.129 - INFO [userservice,,] 24452 --- [RMI TCP Connection(1)-192.168.100.18] o.s.web.servlet.DispatcherServlet       : Completed initialization in 2 ms
+-2025-07-07 21:40:27.104 - INFO [userservice,686c149bc944fd8743586ea44780a054,05c40ef41f43e46a] 24452 --- [http-nio-8085-exec-1] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:40:27.145 - INFO [userservice,686c149bc944fd8743586ea44780a054,05c40ef41f43e46a] 24452 --- [http-nio-8085-exec-1] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:40:27.209 - INFO [userservice,686c149bc944fd8743586ea44780a054,8d8dff7a8d1bf6c3] 24452 --- [http-nio-8085-exec-1] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:44:01.908 - INFO [userservice,,] 24452 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver     : Resolving eureka endpoints via configuration
+-2025-07-07 21:48:47.656 - INFO [userservice,686c168f13d95c46caed6161a28f9adb,ec3c9e35dea8fe8a] 24452 --- [http-nio-8085-exec-3] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:48:47.659 - INFO [userservice,686c168f13d95c46caed6161a28f9adb,ec3c9e35dea8fe8a] 24452 --- [http-nio-8085-exec-3] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:48:47.664 - INFO [userservice,686c168f13d95c46caed6161a28f9adb,5cfe8493cce4408f] 24452 --- [http-nio-8085-exec-3] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:49:01.920 - INFO [userservice,,] 24452 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver     : Resolving eureka endpoints via configuration
+-2025-07-07 21:53:09.318 - INFO [userservice,686c179577bf26c752c7f3ac9c36873c,ad23e2da91344419] 24452 --- [http-nio-8085-exec-5] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:53:09.322 - INFO [userservice,686c179577bf26c752c7f3ac9c36873c,ad23e2da91344419] 24452 --- [http-nio-8085-exec-5] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:53:09.326 - INFO [userservice,686c179577bf26c752c7f3ac9c36873c,67447b7fcc247d3c] 24452 --- [http-nio-8085-exec-5] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:53:09.345 - INFO [userservice,686c179591ad70532842fe68f4034818,637875613fb4c58b] 24452 --- [http-nio-8085-exec-6] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:53:09.348 - INFO [userservice,686c179591ad70532842fe68f4034818,637875613fb4c58b] 24452 --- [http-nio-8085-exec-6] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:53:09.351 - INFO [userservice,686c179591ad70532842fe68f4034818,685aeb06a91ffddc] 24452 --- [http-nio-8085-exec-6] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:53:09.396 - INFO [userservice,686c1795a220abc7fc93b2217544041d,d763861e60f1733d] 24452 --- [http-nio-8085-exec-7] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:53:09.398 - INFO [userservice,686c1795a220abc7fc93b2217544041d,d763861e60f1733d] 24452 --- [http-nio-8085-exec-7] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:53:09.403 - INFO [userservice,686c1795a220abc7fc93b2217544041d,149c672046dc1c59] 24452 --- [http-nio-8085-exec-7] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:53:41.227 - INFO [userservice,686c17b50630e57e497c254be1188229,310ae70172788749] 24452 --- [http-nio-8085-exec-8] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:53:41.230 - INFO [userservice,686c17b50630e57e497c254be1188229,310ae70172788749] 24452 --- [http-nio-8085-exec-8] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:53:41.233 - INFO [userservice,686c17b50630e57e497c254be1188229,65a3eae55f700d1f] 24452 --- [http-nio-8085-exec-8] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:54:01.928 - INFO [userservice,,] 24452 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver     : Resolving eureka endpoints via configuration
+-2025-07-07 21:54:31.607 - INFO [userservice,686c17e799eec58cb38351a0f2f99a51,920b0804cb90ab47] 24452 --- [http-nio-8085-exec-9] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:54:31.611 - INFO [userservice,686c17e799eec58cb38351a0f2f99a51,920b0804cb90ab47] 24452 --- [http-nio-8085-exec-9] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:54:31.615 - INFO [userservice,686c17e799eec58cb38351a0f2f99a51,befed7d579221048] 24452 --- [http-nio-8085-exec-9] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:54:34.005 - INFO [userservice,686c17ea1b2ac4e9d2698586756e3b63,0ef1e4c654a6c395] 24452 --- [http-nio-8085-exec-10] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:54:34.008 - INFO [userservice,686c17ea1b2ac4e9d2698586756e3b63,0ef1e4c654a6c395] 24452 --- [http-nio-8085-exec-10] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:54:34.010 - INFO [userservice,686c17ea1b2ac4e9d2698586756e3b63,190a68f5a0ffc7c3] 24452 --- [http-nio-8085-exec-10] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:54:34.704 - INFO [userservice,686c17eab28bbb9dee01b66d62aca525,fb54a125eb1fedd6] 24452 --- [http-nio-8085-exec-1] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:54:34.706 - INFO [userservice,686c17eab28bbb9dee01b66d62aca525,fb54a125eb1fedd6] 24452 --- [http-nio-8085-exec-1] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:54:34.710 - INFO [userservice,686c17eab28bbb9dee01b66d62aca525,91cb201876980555] 24452 --- [http-nio-8085-exec-1] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:54:47.277 - INFO [userservice,,] 356 --- [main] o.m.userservice.UserserviceApplication  : Starting UserserviceApplication using Java 23.0.2 with PID 356 (D:\AWBD Microservices\userservice\target\classes started by ioana in D:\AWBD Microservices\userservice)
+-2025-07-07 21:54:47.279 - INFO [userservice,,] 356 --- [main] o.m.userservice.UserserviceApplication  : The following 1 profile is active: "mysql"
+-2025-07-07 21:54:47.332 - INFO [userservice,,] 356 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Fetching config from server at : http://localhost:8070/
+-2025-07-07 21:54:47.333 - INFO [userservice,,] 356 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Located environment: name=userservice, profiles=[default], label=null, version=aa90dac17c9e7963da7e41114ac512ae2b62b3ae, state=
+-2025-07-07 21:54:47.333 - INFO [userservice,,] 356 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Fetching config from server at : http://localhost:8070/
+-2025-07-07 21:54:47.333 - INFO [userservice,,] 356 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader  : Located environment: name=userservice, profiles=[mysql], label=null, version=aa90dac17c9e7963da7e41114ac512ae2b62b3ae, state=
+-2025-07-07 21:54:48.367 - INFO [userservice,,] 356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+-2025-07-07 21:54:48.489 - INFO [userservice,,] 356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+-2025-07-07 21:54:48.761 - INFO [userservice,,] 356 --- [main] o.s.cloud.context.scope.GenericScope    : BeanFactory id=224294f3-032e-32da-a33d-f9edd72ad185
+-2025-07-07 21:54:49.172 - INFO [userservice,,] 356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat initialized with port 8082 (http)
+-2025-07-07 21:54:49.186 - INFO [userservice,,] 356 --- [main] o.apache.catalina.core.StandardService  : Starting service [Tomcat]
+-2025-07-07 21:54:49.186 - INFO [userservice,,] 356 --- [main] o.apache.catalina.core.StandardEngine   : Starting Servlet engine: [Apache Tomcat/10.1.42]
+-2025-07-07 21:54:49.240 - INFO [userservice,,] 356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]      : Initializing Spring embedded WebApplicationContext
+-2025-07-07 21:54:49.241 - INFO [userservice,,] 356 --- [main] w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1907 ms
+-2025-07-07 21:54:49.665 - INFO [userservice,,] 356 --- [main] o.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+-2025-07-07 21:54:49.708 - INFO [userservice,,] 356 --- [main] org.hibernate.Version                   : HHH000412: Hibernate ORM core version 6.6.18.Final
+-2025-07-07 21:54:49.736 - INFO [userservice,,] 356 --- [main] o.h.c.internal.RegionFactoryInitiator   : HHH000026: Second-level cache disabled
+-2025-07-07 21:54:50.009 - INFO [userservice,,] 356 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo     : No LoadTimeWeaver setup: ignoring JPA class transformer
+-2025-07-07 21:54:50.038 - INFO [userservice,,] 356 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Starting...
+-2025-07-07 21:54:50.390 - INFO [userservice,,] 356 --- [main] com.zaxxer.hikari.pool.HikariPool       : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b8cdc4
+-2025-07-07 21:54:50.392 - INFO [userservice,,] 356 --- [main] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Start completed.
+-2025-07-07 21:54:50.483 - INFO [userservice,,] 356 --- [main] org.hibernate.orm.connections.pooling   : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+-2025-07-07 21:54:51.476 - INFO [userservice,,] 356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator      : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+-2025-07-07 21:54:51.597 - INFO [userservice,,] 356 --- [main] j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+-2025-07-07 21:54:51.907 - INFO [userservice,,] 356 --- [main] o.m.u.service.impl.UserServiceImpl      : UserServiceImpl initialized with UserRepository and AuthorityService.
+-2025-07-07 21:54:52.015 - WARN [userservice,,] 356 --- [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-2025-07-07 21:54:52.508 - INFO [userservice,,] 356 --- [main] o.s.b.a.e.web.EndpointLinksResolver     : Exposing 18 endpoints beneath base path '/actuator'
+-2025-07-07 21:54:53.221 - INFO [userservice,,] 356 --- [main] DiscoveryClientOptionalArgsConfiguration: Eureka HTTP Client uses RestTemplate.
+-2025-07-07 21:54:53.265 - WARN [userservice,,] 356 --- [main] iguration$LoadBalancerCaffeineWarnLogger: Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+-2025-07-07 21:54:53.354 - INFO [userservice,,] 356 --- [main] o.s.c.n.eureka.InstanceInfoFactory      : Setting initial instance status as: STARTING
+-2025-07-07 21:54:53.376 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Initializing Eureka in region us-east-1
+-2025-07-07 21:54:53.379 - INFO [userservice,,] 356 --- [main] c.n.d.s.r.aws.ConfigClusterResolver     : Resolving eureka endpoints via configuration
+-2025-07-07 21:54:53.390 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Disable delta property : false
+-2025-07-07 21:54:53.390 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Single vip registry refresh property : null
+-2025-07-07 21:54:53.390 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Force full registry fetch : false
+-2025-07-07 21:54:53.390 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Application is null : false
+-2025-07-07 21:54:53.390 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Registered Applications size is zero : true
+-2025-07-07 21:54:53.390 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Application version is -1: true
+-2025-07-07 21:54:53.390 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Getting all instance registry info from the eureka server
+-2025-07-07 21:54:53.613 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : The response status is 200
+-2025-07-07 21:54:53.616 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Starting heartbeat executor: renew interval is: 30
+-2025-07-07 21:54:53.618 - INFO [userservice,,] 356 --- [main] c.n.discovery.InstanceInfoReplicator    : InstanceInfoReplicator onDemand update allowed rate per min is 4
+-2025-07-07 21:54:53.619 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Discovery Client initialized at timestamp 1751914493619 with initial instances count: 3
+-2025-07-07 21:54:53.625 - INFO [userservice,,] 356 --- [main] o.s.c.n.e.s.EurekaServiceRegistry       : Registering application USERSERVICE with eureka with status UP
+-2025-07-07 21:54:53.626 - INFO [userservice,,] 356 --- [main] com.netflix.discovery.DiscoveryClient   : Saw local status change event StatusChangeEvent [timestamp=1751914493626, current=UP, previous=STARTING]
+-2025-07-07 21:54:53.627 - INFO [userservice,,] 356 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:dec8c897b52363a9f81ee84a8787c452: registering service...
+-2025-07-07 21:54:53.641 - INFO [userservice,,] 356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat started on port 8082 (http) with context path '/'
+-2025-07-07 21:54:53.642 - INFO [userservice,,] 356 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration: Updating port to 8082
+-2025-07-07 21:54:53.664 - INFO [userservice,,] 356 --- [main] o.m.userservice.UserserviceApplication  : Started UserserviceApplication in 8.423 seconds (process running for 9.158)
+-2025-07-07 21:54:53.677 - INFO [userservice,,] 356 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:dec8c897b52363a9f81ee84a8787c452 - registration status: 204
+-2025-07-07 21:54:54.539 - INFO [userservice,,] 356 --- [RMI TCP Connection(4)-192.168.100.18] o.a.c.c.C.[Tomcat].[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+-2025-07-07 21:54:54.539 - INFO [userservice,,] 356 --- [RMI TCP Connection(4)-192.168.100.18] o.s.web.servlet.DispatcherServlet       : Initializing Servlet 'dispatcherServlet'
+-2025-07-07 21:54:54.542 - INFO [userservice,,] 356 --- [RMI TCP Connection(4)-192.168.100.18] o.s.web.servlet.DispatcherServlet       : Completed initialization in 2 ms
+-2025-07-07 21:55:41.924 - INFO [userservice,686c182d6e26247650478b8800f1d68b,e24da404a16e1a7e] 356 --- [http-nio-8082-exec-1] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:55:41.994 - INFO [userservice,686c182d6e26247650478b8800f1d68b,e24da404a16e1a7e] 356 --- [http-nio-8082-exec-1] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:55:42.063 - INFO [userservice,686c182d6e26247650478b8800f1d68b,22f76decc54138eb] 356 --- [http-nio-8082-exec-1] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:55:44.559 - INFO [userservice,686c1830a6cccb5581d7aaa796652c8d,d0535dc529b59437] 24452 --- [http-nio-8085-exec-4] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:55:44.561 - INFO [userservice,686c1830a6cccb5581d7aaa796652c8d,d0535dc529b59437] 24452 --- [http-nio-8085-exec-4] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:55:44.564 - INFO [userservice,686c1830a6cccb5581d7aaa796652c8d,2bfb5728cffcc348] 24452 --- [http-nio-8085-exec-4] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:55:45.554 - INFO [userservice,686c18312431044ac576fd2a791d153b,9235aa44747251f9] 356 --- [http-nio-8082-exec-3] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:55:45.558 - INFO [userservice,686c18312431044ac576fd2a791d153b,9235aa44747251f9] 356 --- [http-nio-8082-exec-3] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:55:45.562 - INFO [userservice,686c18312431044ac576fd2a791d153b,3ecb8b85ed28d9f6] 356 --- [http-nio-8082-exec-3] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:55:46.271 - INFO [userservice,686c183281789147c012d13846ad47af,ba0b829bd7d724bc] 24452 --- [http-nio-8085-exec-3] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:55:46.274 - INFO [userservice,686c183281789147c012d13846ad47af,ba0b829bd7d724bc] 24452 --- [http-nio-8085-exec-3] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:55:46.276 - INFO [userservice,686c183281789147c012d13846ad47af,d64c71257186cdcc] 24452 --- [http-nio-8085-exec-3] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:55:46.813 - INFO [userservice,686c1832ca78ef0476abfba7d15dd93c,dd4b049c36d56103] 356 --- [http-nio-8082-exec-5] o.m.u.service.impl.UserServiceImpl      : Attempting to find or create user with Keycloak ID: 9171330e-e708-4c01-bbbc-fca39ef2e770 and username: admin
+-2025-07-07 21:55:46.817 - INFO [userservice,686c1832ca78ef0476abfba7d15dd93c,dd4b049c36d56103] 356 --- [http-nio-8082-exec-5] o.m.u.service.impl.UserServiceImpl      : Existing user admin updated and saved.
+-2025-07-07 21:55:46.821 - INFO [userservice,686c1832ca78ef0476abfba7d15dd93c,55c9ead5efc7a621] 356 --- [http-nio-8082-exec-5] o.m.u.service.impl.UserServiceImpl      : Attempting to find user by ID: 1
+-2025-07-07 21:57:26.455 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry       : Unregistering application USERSERVICE with eureka with status DOWN
+-2025-07-07 21:57:26.456 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Saw local status change event StatusChangeEvent [timestamp=1751914646456, current=DOWN, previous=UP]
+-2025-07-07 21:57:26.456 - INFO [userservice,,] 356 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:dec8c897b52363a9f81ee84a8787c452: registering service...
+-2025-07-07 21:57:26.457 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry       : Unregistering application USERSERVICE with eureka with status DOWN
+-2025-07-07 21:57:26.457 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Saw local status change event StatusChangeEvent [timestamp=1751914646457, current=DOWN, previous=UP]
+-2025-07-07 21:57:26.457 - INFO [userservice,,] 24452 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:c1f9817f225e0518a12207b7d39d37e5: registering service...
+-2025-07-07 21:57:26.459 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown       : Commencing graceful shutdown. Waiting for active requests to complete
+-2025-07-07 21:57:26.460 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown       : Commencing graceful shutdown. Waiting for active requests to complete
+-2025-07-07 21:57:26.463 - INFO [userservice,,] 356 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:dec8c897b52363a9f81ee84a8787c452 - registration status: 204
+-2025-07-07 21:57:26.464 - INFO [userservice,,] 356 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown       : Graceful shutdown complete
+-2025-07-07 21:57:26.466 - INFO [userservice,,] 24452 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown       : Graceful shutdown complete
+-2025-07-07 21:57:26.474 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+-2025-07-07 21:57:26.475 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+-2025-07-07 21:57:26.477 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated...
+-2025-07-07 21:57:26.477 - INFO [userservice,,] 24452 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:c1f9817f225e0518a12207b7d39d37e5 - registration status: 204
+-2025-07-07 21:57:26.482 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated...
+-2025-07-07 21:57:26.484 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed.
+-2025-07-07 21:57:26.485 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed.
+-2025-07-07 21:57:26.485 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Shutting down DiscoveryClient ...
+-2025-07-07 21:57:26.486 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Shutting down DiscoveryClient ...
+-2025-07-07 21:57:29.495 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Unregistering ...
+-2025-07-07 21:57:29.495 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Unregistering ...
+-2025-07-07 21:57:29.512 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:c1f9817f225e0518a12207b7d39d37e5 - deregister  status: 200
+-2025-07-07 21:57:29.512 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : DiscoveryClient_USERSERVICE/userservice:dec8c897b52363a9f81ee84a8787c452 - deregister  status: 200
+-2025-07-07 21:57:29.512 - INFO [userservice,,] 24452 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Completed shut down of DiscoveryClient
+-2025-07-07 21:57:29.512 - INFO [userservice,,] 356 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient   : Completed shut down of DiscoveryClient
+-
