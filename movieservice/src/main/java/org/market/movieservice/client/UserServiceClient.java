@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 
-@FeignClient(name = "userservice", configuration = FeignClientConfig.class)
+@FeignClient(name = "gatewayserver", configuration = FeignClientConfig.class)
 public interface UserServiceClient {
 
     @GetMapping("/api/v1/users/{userId}")
