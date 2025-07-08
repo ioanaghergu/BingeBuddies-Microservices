@@ -1,7 +1,7 @@
 package org.market.movieclubsservice.controller;
 
 import jakarta.validation.Valid;
-import org.market.movieclubsservice.client.UserClient;
+import org.market.movieclubsservice.client.Client;
 import org.market.movieclubsservice.dto.MovieClubDTO;
 import org.market.movieclubsservice.dto.ScreeningEventDTO;
 import org.market.movieclubsservice.exception.MovieClubAlreadyExistsException;
@@ -28,9 +28,9 @@ import java.util.Map;
 public class MovieClubController {
     private final MovieClubService movieClubService;
     private final ScreeningEventService eventService;
-    private final UserClient userClient;
+    private final Client userClient;
 
-    public MovieClubController(MovieClubService movieClubService, ScreeningEventService eventService, UserClient userClient) {
+    public MovieClubController(MovieClubService movieClubService, ScreeningEventService eventService, Client userClient) {
         this.movieClubService = movieClubService;
         this.eventService = eventService;
         this.userClient = userClient;
