@@ -2,8 +2,7 @@ package org.market.movieclubsservice.service.impl;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
-import org.market.movieclubsservice.client.MovieClient;
-import org.market.movieclubsservice.client.UserClient;
+import org.market.movieclubsservice.client.Client;
 import org.market.movieclubsservice.domain.ClubSettings;
 import org.market.movieclubsservice.domain.MovieClub;
 import org.market.movieclubsservice.dto.MovieClubDTO;
@@ -27,15 +26,12 @@ public class MovieClubServiceImpl implements MovieClubService {
 
     private final MovieClubRepository movieClubRepository;
     private final MovieClubMapper movieClubMapper;
-    private final UserClient userClient;
-    private final MovieClient movieClient;
+    private final Client client;
 
-    public MovieClubServiceImpl(MovieClubRepository movieClubRepository, MovieClubMapper movieClubMapper, UserClient userClient, MovieClient movieClient) {
+    public MovieClubServiceImpl(MovieClubRepository movieClubRepository, MovieClubMapper movieClubMapper, Client client) {
         this.movieClubRepository = movieClubRepository;
         this.movieClubMapper = movieClubMapper;
-        this.userClient = userClient;
-        this.movieClient = movieClient;
-        log.info("MovieClubServiceImpl initialized with MovieClubRepository, MovieClubMapper, UserClient, and MovieClient.");
+        this.client = client;
     }
 
     @Override
@@ -74,7 +70,7 @@ public class MovieClubServiceImpl implements MovieClubService {
                 });
         log.debug("Movie club ID: {} found.", movieClubId);
 
-        UserDTO user = userClient.getUserById(userId);
+        UserDTO user = client.getUserById(userId);
         if (user == null) {
             log.warn("User with ID: {} not found when trying to join club ID: {}. Throwing UserNotFoundException.", userId, movieClubId);
             throw new UserNotFoundException("User with id " + userId + " not found");
@@ -102,7 +98,7 @@ public class MovieClubServiceImpl implements MovieClubService {
     @Transactional
     public MovieClubDTO createMovieClub(MovieClubDTO movieClubDTO, Long adminId) {
         log.info("Attempting to create new movie club with name: '{}' by admin ID: {}.", movieClubDTO.getName(), adminId);
-        UserDTO admin = userClient.getUserById(adminId);
+        UserDTO admin = client.getUserById(adminId);
         if (admin == null) {
             log.warn("Admin user with ID: {} not found when creating club. Throwing UserNotFoundException.", adminId);
             throw new UserNotFoundException("Admin user with id " + adminId + " not found");
@@ -246,7 +242,7 @@ public class MovieClubServiceImpl implements MovieClubService {
         if (movieClub.getAdminId() != null) {
             try {
                 log.debug("Fetching admin details for admin ID: {}.", movieClub.getAdminId());
-                UserDTO adminDTO = userClient.getUserById(movieClub.getAdminId());
+                UserDTO adminDTO = client.getUserById(movieClub.getAdminId());
                 if (adminDTO != null) {
                     movieClubDTO.setAdminId(adminDTO.getId());
                     log.debug("Successfully fetched admin details for admin ID: {}.", movieClub.getAdminId());
@@ -265,7 +261,7 @@ public class MovieClubServiceImpl implements MovieClubService {
                 log.debug("Fetching details for {} members for club ID: {}.", memberIds.size(), movieClub.getId());
 
                 for (Long memberId : memberIds) {
-                    UserDTO memberDTO = userClient.getUserById(memberId);
+                    UserDTO memberDTO = client.getUserById(memberId);
                     if (memberDTO != null) {
                         memberUsers.add(memberDTO);
                         log.trace("Fetched member ID: {} for club ID: {}.", memberId, movieClub.getId());
@@ -290,7 +286,7 @@ public class MovieClubServiceImpl implements MovieClubService {
                 if (eventDTO.getMovieId() != null) {
                     try {
                         log.debug("Fetching movie details for event movie ID: {} for club ID: {}.", eventDTO.getMovieId(), movieClub.getId());
-                        MovieDTO movieDTO = movieClient.getMovieById(eventDTO.getMovieId());
+                        MovieDTO movieDTO = client.getMovieById(eventDTO.getMovieId());
                         if (movieDTO != null) {
                             eventDTO.setMovieId(movieDTO.getId());
                             eventDTO.setMovieTitle(movieDTO.getTitle());
