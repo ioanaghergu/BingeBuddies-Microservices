@@ -1,7 +1,7 @@
 package org.market.movieclubsservice.controller;
 
 import jakarta.validation.Valid;
-import org.market.movieclubsservice.client.UserClient;
+import org.market.movieclubsservice.client.Client;
 import org.market.movieclubsservice.dto.ScreeningEventDTO;
 import org.market.movieclubsservice.exception.MovieClubNotFoundException;
 import org.market.movieclubsservice.exception.MovieNotFoundException;
@@ -22,9 +22,9 @@ import java.util.Optional;
 public class ScreeningEventController {
     private final ScreeningEventService screeningEventService;
     private final MovieClubService movieClubService;
-    private final UserClient userService;
+    private final Client userService;
 
-    public ScreeningEventController(ScreeningEventService screeningEventService, MovieClubService movieClubService, UserClient userService) {
+    public ScreeningEventController(ScreeningEventService screeningEventService, MovieClubService movieClubService, Client userService) {
         this.screeningEventService = screeningEventService;
         this.movieClubService = movieClubService;
         this.userService = userService;
