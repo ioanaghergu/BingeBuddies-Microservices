@@ -2,7 +2,7 @@ package org.market.movieclubsservice.service.impl;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
-import org.market.movieclubsservice.client.MovieClient;
+import org.market.movieclubsservice.client.Client;
 import org.market.movieclubsservice.domain.MovieClub;
 import org.market.movieclubsservice.domain.ScreeningEvent;
 import org.market.movieclubsservice.dto.MovieDTO;
@@ -27,14 +27,13 @@ public class ScreeningEventServiceImpl implements ScreeningEventService {
     private final ScreeningEventRepository screeningEventRepository;
     private final ScreeningEventMapper screeningEventMapper;
     private final MovieClubRepository movieClubRepository;
-    private final MovieClient movieClient;
+    private final Client client;
 
-    public ScreeningEventServiceImpl(ScreeningEventRepository screeningEventRepository, ScreeningEventMapper screeningEventMapper, MovieClubRepository movieClubRepository, MovieClient movieClient) {
+    public ScreeningEventServiceImpl(ScreeningEventRepository screeningEventRepository, ScreeningEventMapper screeningEventMapper, MovieClubRepository movieClubRepository, Client client) {
         this.screeningEventRepository = screeningEventRepository;
         this.screeningEventMapper = screeningEventMapper;
         this.movieClubRepository = movieClubRepository;
-        this.movieClient = movieClient;
-        log.info("ScreeningEventServiceImpl initialized with ScreeningEventRepository, ScreeningEventMapper, MovieClubRepository, and MovieClient.");
+        this.client = client;
     }
 
     @Override
@@ -64,7 +63,7 @@ public class ScreeningEventServiceImpl implements ScreeningEventService {
         }
         log.debug("Movie club with ID: {} found for screening event.", clubId);
 
-        MovieDTO movie = movieClient.getMovieById(screeningEventDTO.getMovieId());
+        MovieDTO movie = client.getMovieById(screeningEventDTO.getMovieId());
         if(movie == null){
             log.warn("Movie with ID: {} not found by Movie Service when adding screening event. Throwing MovieNotFoundException.", screeningEventDTO.getMovieId());
             throw new MovieNotFoundException("Movie with id " + screeningEventDTO.getMovieId() + " not found");
@@ -99,7 +98,7 @@ public class ScreeningEventServiceImpl implements ScreeningEventService {
             if (event.getMovieId() != null) {
                 try {
                     log.debug("Fetching movie details for event movie ID: {} for event ID: {}.", event.getMovieId(), event.getId());
-                    MovieDTO movieDTO = movieClient.getMovieById(event.getMovieId());
+                    MovieDTO movieDTO = client.getMovieById(event.getMovieId());
                     if (movieDTO != null) {
                         eventDTO.setMovieTitle(movieDTO.getTitle());
                         log.debug("Successfully fetched movie title '{}' for event movie ID: {}.", movieDTO.getTitle(), event.getMovieId());
